@@ -26,7 +26,6 @@ class Parent extends React.Component {
   render() {
     const title = brand.name;
     const description = brand.desc;
-    console.log(title, description);
     const { classes } = this.props;
     // Get Path Location
     let parts = this.props.history.location.pathname.split('/');
@@ -36,6 +35,8 @@ class Parent extends React.Component {
       .find(obj => (
         obj.key === place
       ));
+    console.log(place);
+    console.log(menuItems);
     const getMenus = menuArray => menuArray.map((item, index) => (
       <Button
         key={index.toString()}

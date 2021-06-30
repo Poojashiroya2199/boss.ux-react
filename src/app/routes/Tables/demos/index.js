@@ -9,3 +9,4 @@ export StatusLabel from './StatusLabel';
 export StatusColorRow from './StatusColorRow';
 export EmptyTable from './EmptyTable';
 export TrackingTable from './TrackingTable';
+export CustomTable from './CustomTable';

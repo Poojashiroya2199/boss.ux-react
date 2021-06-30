@@ -74,6 +74,11 @@ module.exports = [
         name: 'Table Playgound',
         link: '/app/tables/table-playground'
       },
+      {
+        key: 'table_custom',
+        name: 'Custom Table',
+        link: '/app/tables/custom-table'
+      },
     ]
   },
   {
@@ -141,6 +146,11 @@ module.exports = [
         name: 'WYSIWYG Editor',
         link: '/app/forms/wysiwyg-editor'
       },
+      {
+        key: 'multiple-forms',
+        name: 'Multiple Forms',
+        link: '/app/forms/multiple-forms'
+      }
     ]
   },
   {

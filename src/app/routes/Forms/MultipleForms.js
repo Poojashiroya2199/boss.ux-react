@@ -3,27 +3,18 @@ import { Helmet } from 'react-helmet';
 import brand from 'ba-utils/brand';
 import { withStyles } from '@material-ui/core/styles';
 import { SourceReader, PapperBlock } from './../../components';
-import { ReduxFormDemo } from './demos';
+import { MultipleForm } from './demos';
 
 const styles = ({
   root: {
     flexGrow: 1,
+  },
+  papper: {
+    background: 'linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6))',
   }
 });
 
-class ReduxForm extends React.Component {
-  state = {
-    valueForm: []
-  }
-
-  showResult(values) {
-    setTimeout(() => {
-      this.setState({ valueForm: values });
-      window.alert(`You submitted:\n\n${this.state.valueForm}`);
-    }, 500); // simulate server latency
-    console.log(values);
-  }
-
+class MultipleForms extends React.Component {
   render() {
     const title = brand.name + ' - Form';
     const description = brand.desc;
@@ -38,10 +29,10 @@ class ReduxForm extends React.Component {
           <meta property="twitter:title" content={title} />
           <meta property="twitter:description" content={description} />
         </Helmet>
-        <PapperBlock title="Redux Form" desc="This is a simple demonstration of how to connect all the standard material-ui form elements to redux-form.">
+        <PapperBlock title="Multiple Forms" desc="">
           <div>
-            <ReduxFormDemo onSubmit={(values) => this.showResult(values)} />
-            <SourceReader componentName={docSrc + 'ReduxFormDemo.js'} />
+            <MultipleForm />
+            <SourceReader componentName={docSrc + 'MultipleForm.js'} />
           </div>
         </PapperBlock>
       </div>
@@ -49,4 +40,4 @@ class ReduxForm extends React.Component {
   }
 }
 
-export default withStyles(styles)(ReduxForm);
+export default withStyles(styles)(MultipleForms);

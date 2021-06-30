@@ -14,6 +14,7 @@ import AdvancedTable from './Tables/AdvancedTable';
 import TreeTable from './Tables/TreeTable';
 import CrudTable from './Tables/CrudTable';
 import TablePlayground from './Tables/TablePlayground';
+import CustomTables from './Tables/CustomTables';
 // Forms
 import ReduxForm from './Forms/ReduxForm';
 import DateTimePicker from './Forms/DateTimePicker';
@@ -27,6 +28,7 @@ import Textbox from './Forms/Textbox';
 import Autocomplete from './Forms/Autocomplete';
 import TextEditor from './Forms/TextEditor';
 import Upload from './Forms/Upload';
+import MultipleForms from './Forms/MultipleForms';
 // UI Components
 import Badges from './UiElements/Badges';
 import Avatars from './UiElements/Avatars';
@@ -231,9 +233,17 @@ export default (store) => { // eslint-disable-line
             component: withTracker(TablePlayground),
           },
           {
+            path: '/app/tables/custom-table',
+            component: withTracker(CustomTables),
+          },
+          {
             path: '/app/forms',
             component: withTracker(Parent),
             exact: true,
+          },
+          {
+            path: '/app/forms/multiple-forms',
+            component: withTracker(MultipleForms),
           },
           {
             path: '/app/forms/reduxform',

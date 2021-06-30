@@ -30,3 +30,5 @@ export TagSuggestions from './TagSuggestions';
 export SelectSuggestions from './SelectSuggestions';
 export SelectSuggestionTags from './SelectSuggestionTags';
 export HighlightSuggest from './HighlightSuggest';
+//multipke forms
+export MultipleForm from "./MultipleForm.js";
